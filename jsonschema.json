@@ -1,0 +1,58 @@
+{
+    "$id": "overlay",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$comment": "config file for overlay",
+    "type": "object",
+    "properties": {
+        "peers": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "required": [
+                        "name",
+                        "port",
+                        "subnet",
+                        "rasPublicKey",
+                        "rsaPrivateKey"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "port": {
+                            "type": "integer"
+                        },
+                        "subnet": {
+                            "type": "string"
+                        },
+                        "rsaPublicKey": {
+                            "type": "string"
+                        },
+                        "rsaPrivateKey": {
+                            "type": "string"
+                        },
+                        "ed25519PublicKey": {
+                            "type": "string"
+                        },
+                        "ed25519PrivateKey": {
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "device": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "subnet": {
+            "type": "string"
+        }
+    }
+}
