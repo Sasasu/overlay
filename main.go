@@ -14,7 +14,7 @@ import (
 
 var (
 	tTincup, _ = template.New("tincup").Parse(`#!/bin/sh
-ip link $INTERFACE up
+ip link set $INTERFACE up
 ip addr add {{.TSubnet}} dev $INTERFACE
 `)
 
